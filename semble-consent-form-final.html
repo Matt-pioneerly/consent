@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semble Customer Marketing Consent Form - DEMO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #050505;
+            background: #F6F5F3;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .demo-banner {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FFB03E 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 3px solid #FF6B6B;
+            box-shadow: 0 4px 6px rgba(255, 107, 107, 0.3);
+        }
+        
+        .demo-banner h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .demo-banner p {
+            font-size: 14px;
+            margin: 5px 0;
+            opacity: 0.95;
+        }
+        
+        .demo-banner strong {
+            font-weight: 700;
+        }
+        
+        .logo-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #38D2A6;
+        }
+        
+        .logo-header img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        h1 {
+            color: #050505;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .subtitle {
+            color: #383838;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: #050505;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #383838;
+            font-size: 16px;
+            margin: 20px 0 10px 0;
+        }
+        
+        .intro-box {
+            background: #F6F5F3;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #38D2A6;
+        }
+        
+        .intro-box p {
+            margin-bottom: 10px;
+            color: #050505;
+        }
+        
+        .intro-box ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .intro-box li:before {
+            content: "✓ ";
+            color: #38D2A6;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #050505;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus {
+            outline: none;
+            border-color: #007D7D;
+        }
+        
+        .checkbox-group {
+            margin: 15px 0;
+        }
+        
+        .checkbox-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #007D7D;
+        }
+        
+        .checkbox-item label {
+            font-weight: normal;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        
+        .radio-group {
+            margin: 15px 0;
+        }
+        
+        .radio-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        input[type="radio"] {
+            margin-right: 10px;
+            margin-top: 3px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #007D7D;
+        }
+        
+        .radio-item label {
+            font-weight: normal;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        
+        .info-box {
+            background: #FFF9E6;
+            border-left: 4px solid #FFB03E;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box p {
+            margin-bottom: 5px;
+            color: #050505;
+        }
+        
+        .withdrawal-box {
+            background: #E8F5F3;
+            border-left: 4px solid #38D2A6;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .withdrawal-box h4 {
+            color: #007D7D;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .withdrawal-box ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .withdrawal-box li {
+            margin-bottom: 5px;
+            color: #050505;
+        }
+        
+        .declaration-box {
+            background: #F6F5F3;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .declaration-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .declaration-box li:before {
+            content: "✓ ";
+            color: #007D7D;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .submit-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        button[type="submit"] {
+            background: #007D7D;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button[type="submit"]:hover {
+            background: #006666;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #383838;
+            font-size: 14px;
+        }
+        
+        .contact-info a {
+            color: #007D7D;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-logo {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0.6;
+        }
+        
+        .footer-logo img {
+            max-width: 120px;
+            height: auto;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 18px;
+            }
+            
+            .demo-banner h3 {
+                font-size: 18px;
+            }
+            
+            .demo-banner p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-banner">
+            <h3>⚠️ DEMO ONLY - NOT COLLECTING DATA ⚠️</h3>
+            <p><strong>This is a design showcase for demonstration purposes only.</strong></p>
+            <p>No backend, no database, no data storage. Submissions are not saved or transmitted anywhere.</p>
+        </div>
+        
+        <div class="logo-header">
+            <img src="semble-logo.svg" alt="Semble Logo">
+        </div>
+        
+        <h1>Customer Marketing Consent Form</h1>
+        <p class="subtitle">Semble Technology Limited</p>
+        
+        <div class="intro-box">
+            <p><strong>About This Consent Form</strong></p>
+            <p>This form requests your permission to use content you provide (quotes, testimonials, images, videos, and non-personal performance data) across Semble's marketing activities.</p>
+            <p style="margin-top: 15px;"><strong>Your consent is:</strong></p>
+            <ul>
+                <li><strong>Voluntary</strong> – You are under no obligation to provide consent</li>
+                <li><strong>Specific</strong> – You can choose exactly what you consent to</li>
+                <li><strong>Revocable</strong> – You can withdraw consent at any time by emailing marketing@semble.io</li>
+            </ul>
+        </div>
+        
+        <form id="consentForm">
+            <!-- Your Information -->
+            <div class="section">
+                <h2>Your Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="organisation">Practice/Organisation Name *</label>
+                    <input type="text" id="organisation" name="organisation" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+            
+            <!-- Section 1: Content Types -->
+            <div class="section">
+                <h2>Section 1: Content Types</h2>
+                <p style="margin-bottom: 15px;">Please select the types of content you consent to Semble collecting and using:</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="quotes" name="contentTypes" value="quotes">
+                        <label for="quotes">Written quotes and testimonials</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="audio" name="contentTypes" value="audio">
+                        <label for="audio">Audio testimonials</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="video" name="contentTypes" value="video">
+                        <label for="video">Video testimonials</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="photography" name="contentTypes" value="photography">
+                        <label for="photography">Photography (workplace, environment, product usage)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="videoFootage" name="contentTypes" value="videoFootage">
+                        <label for="videoFootage">Video footage (interviews, demonstrations)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="performanceData" name="contentTypes" value="performanceData">
+                        <label for="performanceData">Non-personal performance data (e.g., appointments booked, time savings, efficiency metrics)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 2: Primary Usage -->
+            <div class="section">
+                <h2>Section 2: Primary Usage – Content Creation</h2>
+                <p style="margin-bottom: 15px;">I consent to my content being used to create the following marketing assets:</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="caseStudies" name="primaryUsage" value="caseStudies">
+                        <label for="caseStudies">Case studies – In-depth success stories</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="testimonials" name="primaryUsage" value="testimonials">
+                        <label for="testimonials">Testimonials – Standalone endorsements</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="blogContent" name="primaryUsage" value="blogContent">
+                        <label for="blogContent">Blog content – Articles and insights</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="whitepapers" name="primaryUsage" value="whitepapers">
+                        <label for="whitepapers">White papers & reports – Industry analysis</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="educational" name="primaryUsage" value="educational">
+                        <label for="educational">Educational resources – Training courses and masterclasses</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: Secondary Usage -->
+            <div class="section">
+                <h2>Section 3: Secondary Usage – Distribution & Promotion</h2>
+                <p style="margin-bottom: 15px;">I consent to the marketing assets created using my content being distributed via:</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="socialMedia" name="secondaryUsage" value="socialMedia">
+                        <label for="socialMedia">Social media (LinkedIn, Facebook, etc.)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="emailMarketing" name="secondaryUsage" value="emailMarketing">
+                        <label for="emailMarketing">Email marketing (newsletters, campaigns)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="youtube" name="secondaryUsage" value="youtube">
+                        <label for="youtube">YouTube (video hosting and distribution)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="paidAds" name="secondaryUsage" value="paidAds">
+                        <label for="paidAds">Paid advertising (promotional campaigns)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4: Tertiary Usage -->
+            <div class="section">
+                <h2>Section 4: Tertiary Usage – Website Integration</h2>
+                <p style="margin-bottom: 15px;">I consent to my content being featured across Semble's website, including:</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="featureImages" name="tertiaryUsage" value="featureImages">
+                        <label for="featureImages">Feature images (homepage and landing pages)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="showcaseImages" name="tertiaryUsage" value="showcaseImages">
+                        <label for="showcaseImages">Showcase images (promotional sections)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="productPages" name="tertiaryUsage" value="productPages">
+                        <label for="productPages">Product/solution pages (feature sections)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="quoteHighlights" name="tertiaryUsage" value="quoteHighlights">
+                        <label for="quoteHighlights">Quote highlights (testimonial sections)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="videoClips" name="tertiaryUsage" value="videoClips">
+                        <label for="videoClips">Video clips (edited promotional segments)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 5: Attribution -->
+            <div class="section">
+                <h2>Section 5: Attribution</h2>
+                <p style="margin-bottom: 15px;">Please select your preference for how you would like to be identified:</p>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="fullAttribution" name="attribution" value="full">
+                        <label for="fullAttribution"><strong>Full attribution</strong> – Use my name, job title, and practice/organisation name</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="partialAttribution" name="attribution" value="partial">
+                        <label for="partialAttribution"><strong>Partial attribution</strong> – Use my first name and practice type only (e.g., "Sarah, GP Practice")</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="anonymous" name="attribution" value="anonymous">
+                        <label for="anonymous"><strong>Anonymous</strong> – Do not use my name (organisation may still be mentioned)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 6: Third-Party Publications -->
+            <div class="section">
+                <h2>Section 6: Third-Party Publications</h2>
+                <div class="info-box">
+                    <p><strong>Note:</strong> We will contact you separately for explicit consent before featuring your content in:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Industry trade journals</li>
+                        <li>Partner publications</li>
+                        <li>Media outlets</li>
+                        <li>Conference materials</li>
+                    </ul>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="thirdPartyUnderstanding" name="thirdPartyUnderstanding" value="understood">
+                    <label for="thirdPartyUnderstanding">I understand that Semble will request additional consent for third-party publications</label>
+                </div>
+            </div>
+            
+            <!-- Rights & Withdrawal -->
+            <div class="section">
+                <h2>Your Rights & Withdrawal of Consent</h2>
+                <p style="margin-bottom: 15px;"><strong>You have the right to:</strong></p>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>Withdraw consent at any time by emailing marketing@semble.io</li>
+                    <li>Request removal of your content from marketing materials</li>
+                    <li>Review content before publication (where feasible)</li>
+                    <li>Access a copy of this consent form at any time</li>
+                </ul>
+                
+                <h3>What Happens When You Withdraw Consent</h3>
+                <p style="margin-bottom: 15px;">If you withdraw consent, Semble Marketing will take the following actions:</p>
+                
+                <div class="withdrawal-box">
+                    <h4>On owned channels (full control):</h4>
+                    <ul>
+                        <li>Remove or replace website pages, testimonials, and images</li>
+                        <li>Delete or unpublish social media posts where feasible</li>
+                        <li>Remove from future email campaigns and sales collateral</li>
+                        <li>Stop using in webinars and presentations going forward</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 15px;">On paid advertising campaigns:</h4>
+                    <ul>
+                        <li>Stop or pause ads immediately</li>
+                        <li>Remove creatives from active ad sets</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 15px;">On third-party or reshared content (limited control):</h4>
+                    <ul>
+                        <li>We will delete our original posts</li>
+                        <li>However, we may not be able to immediately erase reposts, screenshots, press copies, or cached versions created by third parties</li>
+                        <li>We will document all actions taken and provide you with a summary</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 15px;"><strong>Timeline:</strong> We will action removal requests within 30 days and provide confirmation once complete.</p>
+                <p style="margin-top: 10px;"><em>Important: Withdrawing consent will not affect the lawfulness of processing based on consent before withdrawal.</em></p>
+            </div>
+            
+            <!-- Data Protection -->
+            <div class="section">
+                <h2>Data Protection</h2>
+                <p style="margin-bottom: 10px;">This consent is collected and processed in accordance with:</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>UK General Data Protection Regulation (UK GDPR)</li>
+                    <li>Data Protection Act 2018</li>
+                </ul>
+                <p>Your personal data will be stored securely and used only for the purposes specified in this form.</p>
+                <p style="margin-top: 10px;">For more information about how Semble processes your data, please see our Privacy Policy at <a href="https://www.semble.io/privacy-policy" target="_blank">www.semble.io/privacy-policy</a></p>
+            </div>
+            
+            <!-- Declaration -->
+            <div class="section">
+                <h2>Declaration</h2>
+                <div class="declaration-box">
+                    <p style="margin-bottom: 10px;"><strong>I confirm that:</strong></p>
+                    <ul>
+                        <li>I have read and understood this consent form</li>
+                        <li>I am freely giving my consent without pressure or coercion</li>
+                        <li>I understand I can withdraw my consent at any time</li>
+                        <li>I understand the limitations regarding third-party content removal</li>
+                        <li>The information I have provided is accurate</li>
+                    </ul>
+                </div>
+                
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="signature">Digital Signature (Type your full name) *</label>
+                    <input type="text" id="signature" name="signature" placeholder="Type your full name as signature" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signatureDate">Signature Date *</label>
+                    <input type="date" id="signatureDate" name="signatureDate" required>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="submit-section">
+                <button type="submit">Submit Consent Form (Demo Only)</button>
+            </div>
+        </form>
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><strong>Questions or concerns?</strong></p>
+            <p>Contact: <a href="mailto:marketing@semble.io">marketing@semble.io</a></p>
+            <p>Compliance: <a href="mailto:compliance@semble.io">compliance@semble.io</a></p>
+        </div>
+        
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <img src="semble-logo.svg" alt="Semble">
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('consentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Convert FormData to object
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Log to console (for demo purposes only - not stored anywhere)
+            console.log('DEMO - Form Data (not saved):', data);
+            
+            // Show demo message
+            alert('⚠️ DEMO ONLY ⚠️\n\nThis is a design showcase. No data has been collected or stored.\n\nIn a production version, this would be connected to a secure backend system.');
+        });
+        
+        // Set today's date as default
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').value = today;
+        document.getElementById('signatureDate').value = today;
+    </script>
+</body>
+</html>
